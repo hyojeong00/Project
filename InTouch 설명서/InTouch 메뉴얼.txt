@@ -1,0 +1,204 @@
+======================================
+==============    InTouch    ===============
+======================================
+
+■■■■■ Tag ■■■■■
+InTouch에서 Tag는 각각의 개체에 속성을 지정하고, 값을 정해주는 말 그대로 가장 핵심적인 부분
+Tag란 쉽게말해서 프로그래밍 언어의 변수 유형
+
+1. 메모리 유형 Tag
+== 메모리 유형 Tag는 시스템 상수나 계산이 될 변수등에 지정해 줄 수 있는 유형으로써, 가장 많이 쓰이는 유형
+== 메모리 유형 Tag는 총 4가지의 종류가 있으며, 각각의 기능은 아래와 같습니다.
+- Memory Discrete : 0(false, off)과 1(true, on)만의 값을 가지는 Tagname으로, 
+	프로그래밍 언어의 Bool 유형과 비슷하다고 보시면 됩니다. 
+	주로 스위치, 값의 전달 유무를 나타낼 때 사용됩니다.
+- Memory Integer : -2,147,483,648 부터 2,147,483,647 사이의 부호달린 32비트 정수값을 가지는 Tagname으로, 
+	프로그래밍 언어에서의 Int 형식에 해당됩니다. 주로 해당 객체에 정수값을 부여할 때 사용
+- Memory Real : 부동소수점 메모리 Tagname으로, 값은 ±3.4e38 사이의 값을 지닐 수 있습니다. 
+	프로그래밍 언어의 Float에 해당되는 Tagname으로, 주로 소수점 값을 나타낼 때 사용
+- Memory Message : 131글자까지 표현 가능한 텍스트 문자열을 나타낼 때 사용되는 Tagname으로, 
+	프로그래밍 언어에서의 String 형식에 해당됩니다.
+
+2. I/O유형 Tag
+== I/O 유형 Tag는 프로그램에서 값을 읽거나 쓰는데 사용되는 Tag로써, 
+== 프로그램이 가능한 제어기, 프로세스 컴퓨터, 다른 프로그램으로부터의 입출력, 그리고 네트워크 노드로부터의 데이터 등이 포함될 수 있습니다. 
+== I/O 유형의 Tagname은 읽기/쓰기가 기본적으로 설정되며, Tagname Dictionary Definition 팝업 창에서 Read Only 라디오 버튼을 선택하면 읽기 전용으로 구성 가능
+== I/O 유형의 Tag 또한 4가지의 종류가 있습니다.
+- I/O Discrete
+- I/O Integer
+- I/O Real
+- I/O Message
+
+3. 기타 유형 Tagname
+- 그룹 변수(Group Var) : 이 Tag 유형은 알람그룹 이름이 지정된 Tagname에 지정됩니다. 
+	주로 동적 알람 디스플레이, 디스크 기록 및 인쇄 기록을 만드는 데에 사용되며, 다른 알람 그룹을 그룹 변수에 지정함으로써 알람 선택을 효율적으로 관리
+- Hist Trend : Hist Trend를 생성할 대 Hist Trend 유형 Tagname을 사용합니다. 
+	Hist Trend에 관련된 모든 .field는 Hist Trend Tagname에 적용할 수 있습니다.
+- TagID : Hiist Trend 객체들과 함께 사용되어지는 특별한 Tag 유형으로써, 
+	Hist Trend 안에 나타나고 있는 Tagname에 관한 정보를 가져오기 위해 TagID를 사용하게 됩니다. 
+	주된 용도는 각각의 펜에 지정되어 있는 Tagname을 바꾸거나 특별한 벤에 Tagname 이름을 지정하기 위함
+
+4. Indirect 유형
+== Indirect Tag는 작성된 윈도우에서 Tag를 다수의 원본에 재지정할 수 있게 하는 Tag 유형
+== C 언어에서의 Pointer와 비슷한 개념으로 이해하시면 될 것 같습니다. 
+== Indirect Tag 유형의 종류는 Discrete, Analog(Integer와 Real 처럼 숫자값을 가지는 모든 값), 그리고 Message 가 있습니다. 
+== C에서의 Pointer와 마찬가지로 Indirect Tag가 가리키는 원본 객체에 접근할 때 사용되며, 수정 또한 가능
+
+■■■■■ 인터치 단축키 ■■■■■
+
+※ 기본
+Ctrl + E : Animation Link에 사용된 Tag Name List Display 및 변경
+Ctrl + L : Object에 사용된 Text Display 및 변경
+Ctrl + C : 복사
+Ctrl + X : 잘라내기
+Ctrl + V : 붙여넣기
+Ctrl + D : 복제(연속 사용할 경우 이전 복제에 사용한 간격을 동일한 위치에 복제됨)
+Ctrl + Z : 최근 동작 취소(Undo)
+Ctrl + Y : 최근 취소 동작 취소 (Redo)
+Ctrl + W : 현재 Window 속성창 Display
+Ctrl + N : 새 Window 생성
+Ctrl + O : Window Open
+Ctrl + S : Window Save
+Ctrl + + : 선택된 Font Size 증가(System Font Size는 변경안됨)
+Ctrl + - : 선택된 Font Size 감소(System Font Size는 변경안됨)
+Ctrl + T : Tag Dictionary
+F2       : 전체 Object 선택
+
+※ 정렬
+Ctrl + F3 : 왼쪽(Left) 정렬
+Ctrl + F5 : 가운데(Center) 정렬
+Ctrl + F7 : 오른쪽(Right) 정렬
+Ctrl + F4 : 위쪽(Top) 정렬
+Ctrl + F6 : 중앙(Middle) 정렬
+Ctrl + F8 : 바닥(Bottom) 정렬
+Ctrl + F9 : 정중앙 정렬
+Ctrl + H  : 가로 간격을 균등하게 정렬
+
+※ 회전
+F6         : 시계 방향으로 90도 회전
+Shift + F6 : 반시계 방향으로 90도 회전
+F7         : 좌우 대칭 회전
+Shift + F7 : 상하 대칭 회전
+
+※ 위치 이동
+F9         : 제일 뒤로 이동
+Shift + F7 : 제일 앞으로 이동
+
+※ Group 및 Block
+F3         : 선택된 Object Make Cell
+Shift + F3 : 선택된 Object Break Cell
+F5         : 선택된 Object Make Symbol
+Shift + F5 : 선택된 Object Break Symbol
+* Cell   : Object에 등록된 Tag 및 Animation 기능 유지, 크기 변경 불가
+* Symbol : Object에 등록된 Tag 및 Animation 기능 소멸, 크기 변경 가능, 신규 Object로 생성
+
+■■■■■ 인터치 태그 종류 ■■■■■
+Memory Tag -> InTouch 내부적으로 쓰는 Tag
+Memory Discrete : InTouch 내부의 이산태그 (ex. ON, OFF)
+Memory Integer  : InTouch 내부의 정수태그 (ex. -32768 ~ 32767)
+Memory Real     : InTouch 내부의 실수태그 (ex. -99.9 ~ 99.9)
+Memory Message  : InTouch 내부의 문자열태그 (ex. 스마트팩토리)
+I/O Tag -> InTouch와 외부프로그램과 Interface(대화,통신)하는 Tag
+           PLC, Equipment(설비) VB, Excel, 등등..
+I/O Discrete    : InTouch 외부의 이산태그 (ex. ON, OFF)
+I/O Integer     : InTouch 외부의 정수태그 (ex. -32768 ~ 32767)
+I/O Real        : InTouch 외부의 실수태그 (ex. -99.9 ~ 99.9)
+I/O Message     : InTouch 외부의 문자열태그 (ex. 스마트팩토리)
+Indirect Tag -> 하나의 Indirect Tag로 다른 Tag(Memory,I/O)를 변경함(간접태그)
+Indirect Discrete : 간접 이산태그(ex. ON,OFF)
+Indirect Analog   : 간접 아날로그태그(정수,실수 포함)
+Indirect Message  : 간접 문자열태그(ex. 스마트팩토리)
+
+■■■■■ PLC설정 ■■■■■
+OPC서버에서 PLC설정할때 
+어떤 PLC인지에 맞춰서 IP,PORT,통신을 맞춰줌
+TYPE, 항목이름, PLC Address, HMI Tagname
+
+■■■■■ 이미지 배경제거 ■■■■■
+PPT 사용하여 이미지 따오기(글꼴, 폰트)
+Line - no line
+bitmap original
+스포이드로 배경선택하여 색깔뽑기
+이미지 선택후 뽑은 색깔 클릭
+
+■■■■■ Error ■■■■■
+InTouch 
+"The same application is being edited in another session. Cannot edit this application." 
+이라는 오류 (프로그램 강제 종료를 해서 똑같은 프로그램에서 편집중이니 중복 편집 불가)발생시,
+
+소스를 불러올때 해당 폴더에, 저 파일을 하나 생성해 주고, 
+종료될때 지워주는 것으로 중복 실행을 막음
+따라서, 비정상적으로 종료시 저 파일이 남아 있게 되므로 해당 소스를 편집 할 수 없게 된것이었다.
+
+해당 파일경로로 들어가서 appedit.lok 파일을 삭제해주면 된다.
+
+■■■■■ Tag 삭제 ■■■■■
+== InTouch에서는 Tag를 삭제하거나 변수형태를 변형시키기 위해선 Application의 어느 곳에서도 사용되지 않아야 가능
+== CrossReference기능 : 이에 대한 검사
+== CrossReference에서 TagName을 넣고 검색해보면 해당 Tag의 사용처가 나오면 이 검색에서 사용된 곳이 없어야 변형 또는 삭제가 가능
+
+삭제의 경우엔 메뉴-&gt;Special-&gt;UpdateUseCount를 이용하여
+먼저 현재의 TagList를 업데이트 하신 후
+메뉴-&gt;Special-&gt;DeleteUnusedTag를 이용하시면
+현재 어느곳에도 사용되지 않아 삭제할수있는 모든 Tag들이 나오며
+이곳에서 삭제하실 Tag를 선택하시면 됩니다.
+
+■■■■■ 삭제해도 되는 인터치 파일 ■■■■■
+인터치 프로젝트를 다른 컴퓨터로 옮기거나 기타 사유로 
+불필요한 파일들을 깨끗하게 정리하고 싶을때, 
+인터치 프로젝트의 핵심 정보를 담은 파일들을 제외한 나머지 부수적인 파일
+ 
+- 런타임 파일(*.wvw) : 윈도우 파일(*.win)의 컴파일된 런타임 파일로 *.win에 해당하는 *.wvw가 없으면 자동생성하기 때문에 삭제 가능
+- 백업 파일(*.?bk) : 윈도우 메이커에서 변경 작업을 할 때 자동 생성하는 파일로
+- *.win의 백업인 *.wbk, *.nbk, *.xbk, *.cbk, *.obk등 여러 파일이 존재
+- *.?bk의 형태로 와일드 카드를 사용하면 일괄 확인 및 정리가능
+- 기록 로깅 이나 환경 파일도 일부 삭제 할 수 있으나 주의한다.
+
+■■■■■ 인터치 파일 ■■■■■
+- 윈도우 파일(*.win) : 각 화면의 작성 내용과 스크립트를 가지고 있는 파일
+- Application Script(applogic.lgc) : On Startup, While Running, On Shutdown 조건에 따른 스크립트를 가지고 있다.
+- Key Script(*.ksc) : 지정한 키 단위로 On Keydown, While Down, On Keyup 조건별 스크립트 파일이다.
+- Condition Script(*.csc) : On False, While False, On True, While True 조건별 스크립트
+- Data change Script(*.dch) : 지정한 값의 변화에 따라 처리할 스크립트
+- Quick Functions(*.nmd) : 여러곳에서 사용하는 함수 정의
+- 태그 사전(tagname.x)
+
+InTouch를 이용하여 HMI를 제작할때 Alarm Tag 및 Alarm Group을 생성하게 된다.
+생성 방법 및 생성시 유의해야 할 부분에 대해서 이야기 해본다.
+
+■■■■■ Alarm Group / Alarm Tag 사용시 주의사항 ■■■■■
+1. Alarm Group
+  - 생성 시 유의사항
+    Alarm Group을 생성할 때 유의해야 하는 부분이 있는데 바로 Parent Group이다.
+    Parent Group은 해당 Alarm Group이 속해있는 부모 Group이다.
+     - Intouch Alarm 상태를 보여주는 Alarm Viewer Control
+     - Intouch Alarm 상태를 Database에 저장하는 역할을 담당하는 Alarm DB Logger Manager
+     - Intouch Alarm 상태를 2대의 컴퓨터끼리 동기화 해주는 Alarm Hot Backup Manager
+
+    유의 해야 하는 이유는 위에서 적어놓은 3가지 정도로 정리할 수 있다.
+    언급한 3가지의 세부 내용은 다음에 세부적으로 기술하기로 하고 3가지의 공통점은 Alarm Group 단위로 Data를 수집 및 저장한다는 것이다.
+    Alarm Group의 최상위 Group은 $System으로 $System 그룹을 사용하게되면 Alarm Group에 등록되어 있는 모든 그룹에 속한 Tag 및 그룹을 지정하지 않은 모든 Tag의 Alarm 상태가 조회 및 저장된다. 
+    즉, 설정 그룹에 속한 Tag와 그 그룹에 속한 자식 Group의 Tag 정보까지 저회 및 저장 되게 된다.
+    따라서, 정확하거나 편리하게 Alarm Group 정보를 조회 및 저장하기 위해서는 Alarm Group 관계를 잘 정리하여야 한다.
+    (※ Alarm Group은 Alarm 뿐만 아니라 Event 등의 Group 처리를 담당한다.)
+     
+2. Alarm Tag
+  - 생성(설정) 시 유의사항
+   Alarm Tag를 설정 할때 유의해야 점은 3가지 정도가 있다.
+
+   첫째, 자기 집을 잘 찾자.
+	Alarm Tag를 설정할때 Group을 설정하게 되는데 이때 해당 Tag가 속해있는 Alarm Group을 정확하게 설정해야 해당 Group으로 정보가 조회되거나 저장될 수 있다.
+
+   둘째, 초기 값(Initial Value)와 발생 조건(Alarm State)을 주의하자.
+	Alarm Tag의 초기 값과 발생 조건이 같을 경우 Intouch Viewer가 재 시작될때마다 매번 Alarm이 발생되기때문이다. 
+	예를 들자면 Discrete Type의 Alarm Tag의 경우 초기 값이 0이고 발생 조건이 Off로 설정되어 있다면 
+	Intouch Viewer가 다시 시작 될때마다 해당 Tag의 초기 값이 0이고 Alarm 발생 조건이 Off이므로 Alarm으로 인식하여 Alarm이 발생하게 된다.
+
+   셋째, Alarm Comment 입력하는 것을 잊지말자.
+	정상적으로 Tag를 Alarm Tag로 다 등록해서 테스트를 해봤더니 Comment 내용이 빈 공간으로 나와서 황당했던 적이있다. 
+	그 이유는 Alarm의 경우 Comment는 일반 Tag Comment가 아닌 Alarm Comment의 정보를 사용하기 때문이다. 
+	그래서 특별히 별도의 내용을 작성하여 관리를 하는 경우가 아니라면 Alarm Comment의 정보는 Tag Comment의 정보와 동일하게 사용하는것을 추천한다.
+
+==================================================================================================================
+==================================================================================================================
+==================================================================================================================
